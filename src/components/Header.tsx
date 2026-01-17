@@ -48,6 +48,7 @@ const Header = () => {
         <Button
           variant="outline"
           className="bg-transparent border-border hover:bg-secondary text-foreground rounded-full px-6"
+          onClick={() => window.open('https://wa.me/5555996202400?text=Olá! Gostaria de analisar meu caso.', '_blank')}
         >
           Analise seu caso
         </Button>

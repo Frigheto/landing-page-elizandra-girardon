@@ -55,13 +55,20 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg transition-all duration-300" style={{ boxShadow: '0 0 25px rgba(212, 175, 55, 0.4)' }} onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 40px rgba(212, 175, 55, 0.6)'} onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 25px rgba(212, 175, 55, 0.4)'}>
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg transition-all duration-300" 
+            style={{ boxShadow: '0 0 25px rgba(212, 175, 55, 0.4)' }} 
+            onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 0 40px rgba(212, 175, 55, 0.6)'} 
+            onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 0 25px rgba(212, 175, 55, 0.4)'}
+            onClick={() => window.open('https://wa.me/5555996202400?text=Olá! Gostaria de analisar meu caso.', '_blank')}
+          >
             <Scale className="w-5 h-5 mr-2" />
             Analise seu caso
           </Button>
           <Button
             variant="outline"
             className="bg-transparent border-primary/50 hover:bg-primary/10 text-foreground rounded-full px-8 py-6 text-lg transition-all duration-300"
+            onClick={() => document.getElementById('areas-de-atuacao')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Saiba mais
           </Button>

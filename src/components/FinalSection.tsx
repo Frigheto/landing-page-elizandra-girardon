@@ -138,6 +138,7 @@ const FinalSection = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-background font-semibold flex items-center gap-2"
+              onClick={() => window.open('https://wa.me/5555996202400?text=Olá! Gostaria de marcar uma consulta.', '_blank')}
             >
               <Send className="w-5 h-5" />
               Marcar Consulta
@@ -146,6 +147,7 @@ const FinalSection = () => {
               size="lg"
               variant="outline"
               className="border-primary/50 text-primary hover:bg-primary/10 font-semibold"
+              onClick={() => window.open('https://wa.me/5555996202400?text=Olá! Gostaria de enviar uma mensagem.', '_blank')}
             >
               Enviar Mensagem
             </Button>
