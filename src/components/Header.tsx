@@ -5,7 +5,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4">
-      <nav className="card-glass px-6 py-3 flex items-center justify-between">
+      <nav
+        className="card-glass px-6 py-3 flex items-center justify-between"
+        style={{
+          background: "linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--secondary) / 0.16))",
+          boxShadow: "0 12px 30px hsl(var(--foreground) / 0.08), inset 0 1px 0 hsl(var(--primary) / 0.25)",
+          borderColor: "hsl(var(--border))",
+        }}
+      >
         <div className="flex items-center gap-3">
           {/* Logo with enhanced glow */}
           <div 
