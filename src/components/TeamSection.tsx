@@ -11,7 +11,7 @@ const TeamSection = () => {
         className="absolute top-0 right-0 w-96 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%)",
+            "radial-gradient(circle, hsl(var(--primary) / 0.12) 0%, transparent 70%)",
         }}
       />
 
@@ -38,7 +38,7 @@ const TeamSection = () => {
             className="relative mx-auto max-w-4xl aspect-video rounded-3xl overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(220, 80, 60, 0.05) 100%)",
+                  "linear-gradient(135deg, hsl(var(--primary) / 0.12) 0%, hsl(var(--accent) / 0.08) 100%)",
               padding: "2px",
             }}
           >
@@ -49,7 +49,7 @@ const TeamSection = () => {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(90deg, transparent 24%, rgba(212, 175, 55, 0.05) 25%, rgba(212, 175, 55, 0.05) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.05) 75%, rgba(212, 175, 55, 0.05) 76%, transparent 77%, transparent), linear-gradient(180deg, transparent 24%, rgba(212, 175, 55, 0.05) 25%, rgba(212, 175, 55, 0.05) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.05) 75%, rgba(212, 175, 55, 0.05) 76%, transparent 77%, transparent)",
+                      "linear-gradient(90deg, transparent 24%, hsl(var(--primary) / 0.08) 25%, hsl(var(--primary) / 0.08) 26%, transparent 27%, transparent 74%, hsl(var(--primary) / 0.08) 75%, hsl(var(--primary) / 0.08) 76%, transparent 77%, transparent), linear-gradient(180deg, transparent 24%, hsl(var(--primary) / 0.08) 25%, hsl(var(--primary) / 0.08) 26%, transparent 27%, transparent 74%, hsl(var(--primary) / 0.08) 75%, hsl(var(--primary) / 0.08) 76%, transparent 77%, transparent)",
                   backgroundSize: "50px 50px",
                   opacity: 0.5,
                 }}
@@ -74,7 +74,7 @@ const TeamSection = () => {
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(ellipse 95% 90% at 50% 50%, transparent 0%, transparent 40%, rgba(5, 5, 5, 0.1) 60%, rgba(5, 5, 5, 0.3) 80%, rgba(5, 5, 5, 0.6) 90%, hsl(0 0% 5%) 100%)",
+                      "radial-gradient(ellipse 95% 90% at 50% 50%, transparent 0%, transparent 40%, hsl(var(--foreground) / 0.12) 60%, hsl(var(--foreground) / 0.26) 80%, hsl(var(--foreground) / 0.42) 90%, hsl(var(--foreground) / 0.55) 100%)",
                   }}
                 />
 
@@ -83,7 +83,7 @@ const TeamSection = () => {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.08) 25%, transparent 50%, rgba(220, 80, 60, 0.06) 75%, transparent 100%)",
+                      "linear-gradient(135deg, transparent 0%, hsl(var(--primary) / 0.12) 25%, transparent 50%, hsl(var(--accent) / 0.1) 75%, transparent 100%)",
                     animation: "shimmer 3s ease-in-out infinite",
                   }}
                 />

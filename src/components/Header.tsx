@@ -11,7 +11,7 @@ const Header = () => {
           <div 
             className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-lg flex-shrink-0 relative overflow-hidden"
             style={{ 
-              boxShadow: '0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(220, 80, 60, 0.3)' 
+              boxShadow: '0 0 20px hsl(var(--primary) / 0.35), 0 0 32px hsl(var(--accent) / 0.35)'
             }}
           >
             <img 

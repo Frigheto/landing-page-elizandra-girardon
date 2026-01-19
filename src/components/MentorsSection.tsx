@@ -53,7 +53,7 @@ const MentorsSection = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 150% 100% at 50% 0%, rgba(220, 80, 60, 0.08) 0%, rgba(212, 175, 55, 0.04) 40%, transparent 80%)",
+            "radial-gradient(ellipse 150% 100% at 50% 0%, hsl(var(--accent) / 0.12) 0%, hsl(var(--primary) / 0.08) 40%, transparent 80%)",
           filter: "blur(100px)",
         }}
       />
@@ -63,7 +63,7 @@ const MentorsSection = () => {
         className="absolute -right-40 top-1/3 w-96 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(220, 80, 60, 0.12) 0%, transparent 70%)",
+            "radial-gradient(circle, hsl(var(--accent) / 0.14) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -73,7 +73,7 @@ const MentorsSection = () => {
         className="absolute -left-40 bottom-1/4 w-96 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)",
+            "radial-gradient(circle, hsl(var(--primary) / 0.12) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -84,13 +84,13 @@ const MentorsSection = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg"
               style={{
-                boxShadow: "0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(220, 80, 60, 0.2)"
+                boxShadow: "0 0 30px hsl(var(--primary) / 0.35), 0 0 40px hsl(var(--accent) / 0.25)"
               }}>
               <Sparkles className="w-6 h-6 text-background" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
               style={{
-                textShadow: "0 0 40px rgba(212, 175, 55, 0.3)"
+                textShadow: "0 0 32px hsl(var(--primary) / 0.28)"
               }}>
               Áreas de Atuação
             </h2>
@@ -117,17 +117,18 @@ const MentorsSection = () => {
                 {/* Animated glow background */}
                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/25 via-orange-400/15 to-red-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
                   style={{
+                    background: "linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--accent) / 0.16), hsl(var(--primary) / 0.12))",
                     animation: "glow-pulse 3s ease-in-out infinite",
                   }}
                 />
                 
                 {/* Secondary glow layer */}
-                <div className="absolute -inset-1 bg-gradient-to-t from-red-600/10 via-transparent to-primary/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-75 transition-all duration-500" />
+                <div className="absolute -inset-1 bg-gradient-to-t from-primary/12 via-transparent to-accent/12 rounded-2xl blur-xl opacity-0 group-hover:opacity-75 transition-all duration-500" />
                 
                 {/* Card */}
                 <div className="relative h-full p-8 rounded-2xl overflow-hidden border border-primary/20 backdrop-blur-md transition-all duration-300 group-hover:border-primary/70 group-hover:bg-background/90"
                   style={{
-                    background: "rgba(8, 8, 8, 0.6)",
+                    background: "hsl(var(--card) / 0.9)",
                   }}>
                   {/* Background gradient with shimmer */}
                   <div className="absolute inset-0 bg-gradient-to-br from-background to-background/50" />
@@ -135,7 +136,7 @@ const MentorsSection = () => {
                   {/* Shimmer effect on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
-                      background: "linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.1) 25%, transparent 50%, rgba(220, 80, 60, 0.08) 75%, transparent 100%)",
+                      background: "linear-gradient(135deg, transparent 0%, hsl(var(--primary) / 0.14) 25%, transparent 50%, hsl(var(--accent) / 0.12) 75%, transparent 100%)",
                       animation: "shimmer 3s ease-in-out infinite",
                     }}
                   />
@@ -145,7 +146,7 @@ const MentorsSection = () => {
                     {/* Icon container with enhanced glow */}
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center mb-5 group-hover:from-primary/50 group-hover:to-accent/50 transition-all duration-300 relative"
                       style={{
-                        boxShadow: "0 0 20px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)",
+                        boxShadow: "0 0 20px hsl(var(--primary) / 0.2), inset 0 0 20px hsl(var(--primary) / 0.12)",
                       }}>
                       {/* Icon glow on hover */}
                       <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/40 to-accent/40 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-300" />
@@ -174,7 +175,7 @@ const MentorsSection = () => {
                   {/* Top accent line with glow */}
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
-                      boxShadow: "0 0 20px rgba(212, 175, 55, 0.5), inset 0 0 20px rgba(212, 175, 55, 0.2)"
+                      boxShadow: "0 0 16px hsl(var(--primary) / 0.4), inset 0 0 16px hsl(var(--primary) / 0.18)"
                     }}
                   />
                   

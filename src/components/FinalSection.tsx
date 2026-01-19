@@ -21,8 +21,8 @@ const ContactCard = ({ icon: Icon, title, value, link, isEmail = false }) => {
       className="relative p-6 rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300"
       style={{
         background:
-          "linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(220, 80, 60, 0.03) 100%)",
-        border: "1px solid rgba(212, 175, 55, 0.2)",
+          "linear-gradient(135deg, hsl(var(--primary) / 0.08) 0%, hsl(var(--accent) / 0.06) 100%)",
+        border: "1px solid hsl(var(--primary) / 0.25)",
         transform: isHovered ? "scale(1.05)" : "scale(1)",
       }}
     >
@@ -31,7 +31,7 @@ const ContactCard = ({ icon: Icon, title, value, link, isEmail = false }) => {
         className="absolute -inset-1 rounded-2xl blur-xl"
         style={{
           background:
-            "linear-gradient(to bottom right, rgba(212, 175, 55, 0.3), rgba(255, 165, 0, 0.2), rgba(220, 80, 60, 0.2))",
+            "linear-gradient(to bottom right, hsl(var(--primary) / 0.32), hsl(var(--accent) / 0.22), hsl(var(--primary) / 0.18))",
           opacity: isHovered ? 1 : 0,
           transition: "opacity 500ms ease-in-out",
           pointerEvents: "none",
@@ -41,7 +41,7 @@ const ContactCard = ({ icon: Icon, title, value, link, isEmail = false }) => {
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to right, rgba(212, 175, 55, 0.05), rgba(220, 80, 60, 0.05))",
+          background: "linear-gradient(to right, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.08))",
           opacity: isHovered ? 1 : 0,
           transition: "opacity 300ms ease-in-out",
           pointerEvents: "none",
@@ -52,7 +52,7 @@ const ContactCard = ({ icon: Icon, title, value, link, isEmail = false }) => {
       <div
         className="absolute bottom-0 left-0 right-0 h-20"
         style={{
-          background: "linear-gradient(to top, rgba(212, 175, 55, 0.1), transparent)",
+          background: "linear-gradient(to top, hsl(var(--primary) / 0.12), transparent)",
           opacity: isHovered ? 1 : 0,
           transition: "opacity 300ms ease-in-out",
           pointerEvents: "none",
@@ -65,8 +65,8 @@ const ContactCard = ({ icon: Icon, title, value, link, isEmail = false }) => {
             className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center"
             style={{
               boxShadow: isHovered
-                ? "0 0 20px rgba(212, 175, 55, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.2)"
-                : "0 0 10px rgba(212, 175, 55, 0.2)",
+                ? "0 0 20px hsl(var(--primary) / 0.45), inset 0 0 15px hsl(var(--primary) / 0.2)"
+                : "0 0 10px hsl(var(--primary) / 0.18)",
               transition: "all 300ms ease-in-out",
             }}
           >
@@ -121,7 +121,7 @@ const FinalSection = () => {
         className="absolute bottom-0 left-0 w-96 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(220, 80, 60, 0.08) 0%, transparent 70%)",
+            "radial-gradient(circle, hsl(var(--accent) / 0.12) 0%, transparent 70%)",
         }}
       />
 

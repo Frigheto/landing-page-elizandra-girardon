@@ -59,7 +59,7 @@ const StatsSection = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 150% 80% at 50% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(220, 80, 60, 0.04) 30%, transparent 70%)",
+            "radial-gradient(ellipse 150% 80% at 50% 20%, hsl(var(--primary) / 0.12) 0%, hsl(var(--accent) / 0.1) 30%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -115,9 +115,9 @@ const StatsSection = () => {
             <div
               className="p-8 rounded-3xl border-2 relative overflow-hidden"
               style={{
-                background: "linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(220, 80, 60, 0.05))",
+                background: "linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.1))",
                 borderImage:
-                  "linear-gradient(135deg, hsl(43 85% 58%), hsl(10 90% 60%)) 1",
+                  "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))) 1",
               }}
             >
               {/* Subtle glow inside */}
@@ -125,7 +125,7 @@ const StatsSection = () => {
                 className="absolute inset-0 pointer-events-none"
                 style={{
                   background:
-                    "radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.1), transparent 70%)",
+                      "radial-gradient(ellipse at top right, hsl(var(--primary) / 0.12), transparent 70%)",
                   filter: "blur(20px)",
                 }}
               />
@@ -159,7 +159,7 @@ const StatsSection = () => {
                 className="absolute inset-0 rounded-3xl"
                 style={{
                   background:
-                    "radial-gradient(ellipse 100% 110% at 50% 50%, rgba(220, 60, 60, 0.2) 0%, rgba(220, 60, 60, 0.1) 20%, transparent 70%)",
+                    "radial-gradient(ellipse 100% 110% at 50% 50%, hsl(var(--accent) / 0.18) 0%, hsl(var(--accent) / 0.1) 20%, transparent 70%)",
                   filter: "blur(80px)",
                   animation: "redFlash 4s ease-in-out infinite",
                 }}
@@ -170,7 +170,7 @@ const StatsSection = () => {
                 className="absolute inset-0 rounded-3xl"
                 style={{
                   background:
-                    "radial-gradient(ellipse 90% 100% at 50% 45%, rgba(230, 80, 50, 0.15) 0%, rgba(212, 175, 55, 0.1) 25%, transparent 65%)",
+                    "radial-gradient(ellipse 90% 100% at 50% 45%, hsl(var(--primary) / 0.12) 0%, hsl(var(--accent) / 0.12) 25%, transparent 65%)",
                   filter: "blur(60px)",
                   animation: "redFlashAlt 3.5s ease-in-out infinite 0.5s",
                 }}
@@ -210,7 +210,7 @@ const StatsSection = () => {
                   className="absolute inset-0 pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(ellipse 70% 80% at 50% 45%, transparent 0%, transparent 30%, rgba(5, 5, 5, 0.1) 50%, rgba(5, 5, 5, 0.3) 70%, rgba(5, 5, 5, 0.6) 85%, hsl(0 0% 5%) 100%)",
+                      "radial-gradient(ellipse 70% 80% at 50% 45%, transparent 0%, transparent 30%, hsl(var(--foreground) / 0.12) 50%, hsl(var(--foreground) / 0.28) 70%, hsl(var(--foreground) / 0.48) 85%, hsl(var(--foreground) / 0.6) 100%)",
                   }}
                 />
 
@@ -219,7 +219,7 @@ const StatsSection = () => {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(90deg, transparent 24%, rgba(212, 175, 55, 0.08) 25%, rgba(212, 175, 55, 0.08) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.08) 75%, rgba(212, 175, 55, 0.08) 76%, transparent 77%, transparent), linear-gradient(180deg, transparent 24%, rgba(212, 175, 55, 0.08) 25%, rgba(212, 175, 55, 0.08) 26%, transparent 27%, transparent 74%, rgba(212, 175, 55, 0.08) 75%, rgba(212, 175, 55, 0.08) 76%, transparent 77%, transparent)",
+                      "linear-gradient(90deg, transparent 24%, hsl(var(--primary) / 0.1) 25%, hsl(var(--primary) / 0.1) 26%, transparent 27%, transparent 74%, hsl(var(--primary) / 0.1) 75%, hsl(var(--primary) / 0.1) 76%, transparent 77%, transparent), linear-gradient(180deg, transparent 24%, hsl(var(--primary) / 0.1) 25%, hsl(var(--primary) / 0.1) 26%, transparent 27%, transparent 74%, hsl(var(--primary) / 0.1) 75%, hsl(var(--primary) / 0.1) 76%, transparent 77%, transparent)",
                     backgroundSize: "50px 50px",
                   }}
                 />
@@ -229,7 +229,7 @@ const StatsSection = () => {
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.1) 25%, transparent 50%, rgba(220, 80, 60, 0.08) 75%, transparent 100%)",
+                      "linear-gradient(135deg, transparent 0%, hsl(var(--primary) / 0.14) 25%, transparent 50%, hsl(var(--accent) / 0.12) 75%, transparent 100%)",
                     animation: "shimmer 3s ease-in-out infinite",
                   }}
                 />
