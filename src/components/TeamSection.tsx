@@ -1,4 +1,6 @@
 import { Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import TransitionLink from "@/components/TransitionLink";
 
 const TeamSection = () => {
   return (
@@ -106,6 +108,18 @@ const TeamSection = () => {
             {/* Count will be dynamic */}
             Profissionais
           </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-10">
+          <TransitionLink to="/quem-somos">
+            <Button
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg transition-all duration-300"
+              style={{ boxShadow: '0 0 22px hsl(var(--primary) / 0.38)' }}
+            >
+              Conheça nossa equipe
+            </Button>
+          </TransitionLink>
         </div>
 
         {/* Bottom tech line separator */}

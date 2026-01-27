@@ -10,11 +10,13 @@ export const DireitoBancarioPage = () => (
       description: "Especialização completa em questões envolvendo relações com instituições financeiras",
       longDescription: "O Direito Bancário é uma área complexa que envolve questões contratuais, regulatórias e litigiosas com instituições financeiras. Nossa experiência abrange desde revisão de contratos até litigância especializada em demandas contra bancos e financeiras. Nós ajudamos clientes a defender seus direitos quando enfrentam cobranças abusivas, tarifas indevidas e outras práticas irregulares.",
       items: [
-        "Revisão de contratos bancários",
-        "Defesa contra tarifas e juros abusivos",
         "Revisão de financiamentos",
-        "Negociação com instituições financeiras",
-        "Litigância especializada em direito bancário"
+        "Defesa contra tarifas e juros abusivos",
+        "Ações de Superendividamento",
+        "Negociação extrajudiciais com instituições financeiras",
+        "Defesa em fraude em empréstimos",
+        "Defesa em Golpe do pix",
+        "Venda casada"
       ],
       whatsappMessage: "Olá! Gostaria de orientação sobre uma questão de Direito Bancário. Posso marcar uma consulta?"
     }}

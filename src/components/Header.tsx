@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
+import TransitionLink from "@/components/TransitionLink";
 
 const Header = () => {
-  const navItems = ["Início", "Áreas de Atuação", "Serviços", "Sobre"];
+  const navItems = ["Início", "Áreas de Atuação", "Serviços", "Sobre", "Quem Somos"];
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4">
@@ -42,13 +43,23 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`}
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-            >
-              {item}
-            </a>
+            item === "Quem Somos" ? (
+              <TransitionLink
+                key={item}
+                to="/quem-somos"
+                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              >
+                {item}
+              </TransitionLink>
+            ) : (
+              <a
+                key={item}
+                href={`#${item.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`}
+                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              >
+                {item}
+              </a>
+            )
           ))}
         </div>
 

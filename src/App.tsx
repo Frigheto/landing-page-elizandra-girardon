@@ -19,6 +19,7 @@ import {
   ExecucoesBancariasPage,
   DividasRuraisPage
 } from "./pages/AreasPages";
+import QuemSomosPage from "./pages/QuemSomosPage";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/contas-servicos-bancarios" element={<ContasPage />} />
             <Route path="/execucoes-bancarias" element={<ExecucoesBancariasPage />} />
             <Route path="/dividas-rurais" element={<DividasRuraisPage />} />
+            <Route path="/quem-somos" element={<QuemSomosPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
