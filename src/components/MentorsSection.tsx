@@ -1,4 +1,5 @@
-import { CreditCard, FileText, AlertCircle, Briefcase, Scale, TrendingDown, Sparkles, Gavel, Landmark, Wheat, Shield, TrendingUp } from "lucide-react";
+import { CreditCard, FileText, AlertCircle, Briefcase, Scale, TrendingDown, Sparkles, Gavel, Landmark, Wheat, Shield, TrendingUp, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -7,7 +8,8 @@ const services = [
     title: "Direito Bancário",
     description: "Atuação especializada em todas as questões envolvendo relações com instituições financeiras",
     items: ["Contratos bancários", "Tarifas e juros abusivos", "Revisão de financiamentos"],
-    featured: true
+    featured: true,
+    route: "/direito-bancario"
   },
   {
     id: 2,
@@ -15,7 +17,8 @@ const services = [
     title: "Execuções",
     description: "Defesa estratégica em processos de execução e cobrança judicial",
     items: ["Defesa em execuções", "Embargos executivos", "Negociação de dívidas"],
-    featured: true
+    featured: true,
+    route: "/execucoes"
   },
   {
     id: 3,
@@ -23,60 +26,69 @@ const services = [
     title: "Direito do Agronegócio",
     description: "Assessoria jurídica especializada para o setor do agronegócio",
     items: ["Contratos rurais", "Financiamento agrícola", "Questões fundiárias"],
-    featured: true
+    featured: true,
+    route: "/direito-agronegocio"
   },
   {
     id: 4,
     icon: CreditCard,
     title: "Empréstimos e Financiamentos",
     description: "Revisão de contratos, tarifas e juros abusivos, empréstimo consignado, RMC e RCC",
-    items: ["Contratos bancários", "Tarifas abusivas", "Juros excessivos"]
+    items: ["Contratos bancários", "Tarifas abusivas", "Juros excessivos"],
+    route: "/emprestimos-financiamentos"
   },
   {
     id: 5,
     icon: AlertCircle,
     title: "Cartões e Crédito",
     description: "Problemas com limites, juros elevados, alterações não autorizadas e vendas casadas",
-    items: ["Juros elevados", "Limite sem autorização", "Venda casada e contratações indevidas"]
+    items: ["Juros elevados", "Limite sem autorização", "Venda casada e contratações indevidas"],
+    route: "/cartoes-credito"
   },
   {
     id: 7,
     icon: TrendingDown,
     title: "Superendividamento",
     description: "Planejamento de reorganização financeira e mediação com instituições",
-    items: ["Múltiplas dívidas", "Reorganização financeira", "Renegociação"]
+    items: ["Múltiplas dívidas", "Reorganização financeira", "Renegociação"],
+    route: "/superendividamento"
   },
   {
     id: 8,
     icon: Briefcase,
     title: "Fraudes e Golpes",
     description: "Boletos falsos, transferências indevidas, clonagem de cartão e empréstimos fraudulentos",
-    items: ["Golpe do Pix", "Boletos falsos", "Clonagem", "Golpes financeiros"]
+    items: ["Golpe do Pix", "Boletos falsos", "Clonagem", "Golpes financeiros"],
+    route: "/fraudes-golpes"
   },
   {
     id: 9,
     icon: Landmark,
     title: "Contas e Serviços Bancários",
     description: "Tarifas indevidas, devolução de valores e movimentações duvidosas",
-    items: ["Tarifas indevidas"]
+    items: ["Tarifas indevidas"],
+    route: "/contas-servicos-bancarios"
   },
   {
     id: 10,
     icon: Shield,
     title: "Execuções Bancárias",
     description: "Defesa do seu mínimo existencial e patrimonial em processos de execução",
-    items: ["Impenhorabilidade de salário", "Impenhorabilidade do bem de família", "Impenhorabilidade do veículo", "Impenhorabilidade dos valores poupados"]
+    items: ["Impenhorabilidade de salário", "Impenhorabilidade do bem de família", "Impenhorabilidade do veículo", "Impenhorabilidade dos valores poupados"],
+    route: "/execucoes-bancarias"
   },
   {
     id: 11,
     icon: TrendingUp,
     title: "Prorrogação/Alongamento de Dívidas Rurais",
     description: "Defesa do direito do produtor rural em pagar o que é justo e adequado",
-    items: ["Renegociação junto a bancos", "Defesa do direito do produtor rural"]
+    items: ["Renegociação junto a bancos", "Defesa do direito do produtor rural"],
+    route: "/dividas-rurais"
   },
 ];
 
 const MentorsSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="areas-de-atuacao" className="py-32 relative overflow-hidden">
       {/* Multiple background glows for enhanced lighting */}
@@ -193,7 +205,7 @@ const MentorsSection = () => {
                     </p>
                     
                     {/* Items with enhanced styling */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-6">
                       {service.items.map((item, idx) => (
                         <li key={idx} className="text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors flex items-start">
                           <span className="text-primary mr-3 font-bold group-hover:text-accent transition-colors">▸</span>
@@ -201,6 +213,17 @@ const MentorsSection = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Learn More Button */}
+                    {service.route && (
+                      <button
+                        onClick={() => navigate(service.route!)}
+                        className="w-full py-2 px-4 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                      >
+                        Saiba mais
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </button>
+                    )}
                   </div>
                   
                   {/* Top accent line with glow */}
