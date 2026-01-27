@@ -138,7 +138,7 @@ const MentorsSection = () => {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Atendimento especializado em Direito Bancário com foco em soluções práticas e efetivas para seu caso.
+            Nossa equipe está pronta para atender você com experiência, agilidade e dedicação.
           </p>
         </div>
 
