@@ -23,6 +23,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
   const handleNavigateHome = () => {
     startTransition();
     setTimeout(() => {
+      window.scrollTo(0, 0);
       window.location.href = '/';
     }, 700);
   };

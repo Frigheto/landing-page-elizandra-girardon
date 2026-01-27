@@ -24,6 +24,7 @@ const TransitionLink = ({ to, children, className, onClick }: TransitionLinkProp
     // Aguarda a animação de fade out antes de navegar
     setTimeout(() => {
       navigate(to);
+      window.scrollTo(0, 0);
     }, 700);
   };
 
