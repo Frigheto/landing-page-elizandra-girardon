@@ -264,6 +264,11 @@
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
+  .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
   .scroll-animate-fast.animate-in {
     opacity: 1;
     transform: translateY(0);

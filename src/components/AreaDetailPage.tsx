@@ -20,6 +20,10 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
   const Icon = area.icon;
   const whatsappLink = `https://wa.me/5555996202400?text=${encodeURIComponent(area.whatsappMessage)}`;
 
+  if (!area) {
+    return <div className="min-h-screen bg-background flex items-center justify-center">Carregando...</div>;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header com botão voltar */}
@@ -44,7 +48,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
       <main className="pt-32 pb-20">
         <div className="container max-w-4xl mx-auto px-4">
           {/* Hero Section */}
-          <div className="mb-12 text-center scroll-animate">
+          <div className="mb-12 text-center animate-in">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
                 <Icon className="w-8 h-8 text-primary" />
@@ -61,7 +65,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
             {/* Left Column - Description */}
-            <div className="lg:col-span-2 scroll-slide-left">
+            <div className="lg:col-span-2 animate-in">
               <div className="bg-card/40 backdrop-blur-xl border border-primary/30 rounded-3xl p-8 mb-8">
                 <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">
                   Sobre esta área
@@ -87,7 +91,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
             </div>
 
             {/* Right Column - CTA */}
-            <div className="scroll-slide-right">
+            <div className="animate-in">
               <div className="sticky top-32 bg-gradient-to-br from-primary/10 to-accent/5 border-2 border-primary/50 rounded-3xl p-8">
                 <h3 className="text-2xl font-heading font-semibold mb-4 text-foreground">
                   Precisa de ajuda?
@@ -113,7 +117,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
           </div>
 
           {/* Bottom CTA */}
-          <div className="bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 rounded-3xl p-12 text-center scroll-animate border border-primary/20">
+          <div className="bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 rounded-3xl p-12 text-center animate-in border border-primary/20">
             <h2 className="text-3xl font-heading font-bold mb-4 text-foreground">
               Agende uma consulta
             </h2>
