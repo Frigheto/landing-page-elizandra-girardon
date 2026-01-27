@@ -35,8 +35,8 @@ const Header = () => {
           
           {/* Text content */}
           <div className="flex flex-col gap-0">
-            <span className="text-xs font-medium text-muted-foreground">Escritório</span>
-            <span className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Elizandra Girardon</span>
+            <span className="text-xs font-medium text-muted-foreground">Elizandra Girardon</span>
+            <span className="font-heading text-lg font-semibold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Advocacia</span>
           </div>
         </div>
 

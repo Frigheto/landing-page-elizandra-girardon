@@ -36,7 +36,7 @@ export const ExecucoesPage = () => (
         "Renegociação de dívidas em execução",
         "Recursos contra decisões executivas"
       ],
-      whatsappMessage: "Olá! Tenho uma questão relacionada a Execução e gostaria de conversar com vocês. Posso agendar uma consulta?"
+      whatsappMessage: "Olá! Tenho uma questão relacionada a Execuções e gostaria de conversar com vocês. Posso agendar uma consulta?"
     }}
   />
 );

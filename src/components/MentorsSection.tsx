@@ -1,5 +1,5 @@
 import { CreditCard, FileText, AlertCircle, Briefcase, Scale, TrendingDown, Sparkles, Gavel, Landmark, Wheat, Shield, TrendingUp, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import TransitionLink from "@/components/TransitionLink";
 
 const services = [
   {
@@ -88,7 +88,6 @@ const services = [
 ];
 
 const MentorsSection = () => {
-  const navigate = useNavigate();
   return (
     <section id="areas-de-atuacao" className="py-32 relative overflow-hidden">
       {/* Multiple background glows for enhanced lighting */}
@@ -216,13 +215,13 @@ const MentorsSection = () => {
 
                     {/* Learn More Button */}
                     {service.route && (
-                      <button
-                        onClick={() => navigate(service.route!)}
+                      <TransitionLink
+                        to={service.route}
                         className="w-full py-2 px-4 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn"
                       >
                         Saiba mais
                         <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
+                      </TransitionLink>
                     )}
                   </div>
                   

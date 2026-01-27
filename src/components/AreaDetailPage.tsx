@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, MessageCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { usePageTransition } from "@/hooks/usePageTransition";
 
 interface AreaDetail {
   title: string;
@@ -16,9 +16,16 @@ interface AreaDetailPageProps {
 }
 
 const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
-  const navigate = useNavigate();
+  const { startTransition } = usePageTransition();
   const Icon = area.icon;
   const whatsappLink = `https://wa.me/5555996202400?text=${encodeURIComponent(area.whatsappMessage)}`;
+
+  const handleNavigateHome = () => {
+    startTransition();
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 700);
+  };
 
   if (!area) {
     return <div className="min-h-screen bg-background flex items-center justify-center">Carregando...</div>;
@@ -34,7 +41,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
           borderColor: "hsl(var(--border))",
         }}>
           <button
-            onClick={() => navigate("/")}
+            onClick={handleNavigateHome}
             className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
