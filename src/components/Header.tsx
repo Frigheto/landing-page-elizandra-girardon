@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import TransitionLink from "@/components/TransitionLink";
 
 const Header = () => {
-  const navItems = ["Início", "Áreas de Atuação", "Serviços", "Sobre", "Quem Somos"];
+  const navItems = ["Início", "Áreas de Atuação", "Quem Somos"];
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4">
