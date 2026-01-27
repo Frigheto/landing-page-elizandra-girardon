@@ -103,13 +103,13 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
                 </p>
                 <Button
                   onClick={() => window.open(whatsappLink, "_blank")}
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-4 md:py-5 px-4 text-sm md:text-base font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-3 md:py-4 px-3 text-xs md:text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-1.5 flex-wrap"
                   style={{
                     boxShadow: "0 0 22px hsl(var(--primary) / 0.38)"
                   }}
                 >
-                  <MessageCircle className="w-4 h-4 flex-shrink-0" />
-                  <span className="leading-tight">Envie uma mensagem</span>
+                  <MessageCircle className="w-3 h-3 flex-shrink-0" />
+                  <span className="leading-none">Envie uma mensagem</span>
                 </Button>
                 <p className="text-xs text-muted-foreground text-center mt-4">
                   Responderemos no WhatsApp em breve
