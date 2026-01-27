@@ -49,9 +49,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
-          Atendimento humanizado e personalizado em Direito Bancário.
-          Experiência em negociações com bancos e planejamento de reorganização financeira.
-          Especializado nas áreas do Direito Bancário, Execução e Direito do Agronegócio.
+          Atendimento humanizado e personalizado. Experiência em negociações com bancos e planejamento de reorganização financeira. Áreas de atuação do Direito Bancário, Execução e Direito do Agronegócio.
         </p>
 
         {/* CTA Buttons */}
