@@ -5,13 +5,13 @@ const StatsSection = () => {
     {
       icon: Shield,
       title: "Experiência",
-      description: "Especialistas em negociações com instituições bancárias",
-      number: "15+",
+      description: "Anos de experiência em instituições financeiras",
+      number: "24+",
     },
     {
       icon: Users,
-      title: "Atendimento",
-      description: "Humanizado e personalizado para cada caso",
+      title: "Processos realizados",
+      description: "Atendimento humanizado",
       number: "500+",
     },
     {
@@ -70,19 +70,20 @@ const StatsSection = () => {
           {/* Left Column - Stats & Info */}
           <div className="space-y-8">
             {/* Header */}
-            <div>
+            <div className="scroll-slide-left">
               <h2 className="font-heading text-5xl lg:text-6xl font-medium mb-4">
                 <span className="text-primary">Dra. Elizandra</span>
                 <br />
                 <span className="text-foreground">Girardon</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-                Especialista em Direito Bancário com abordagem humanizada e resultados comprovados.
+                Pós-graduada em Direito Bancário, Execuções e Direito do Agronegócio,
+                com ampla experiência de atuação em instituições financeiras.
               </p>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 scroll-animate">
               {stats.map((stat, idx) => {
                 const Icon = stat.icon;
                 return (
@@ -113,7 +114,7 @@ const StatsSection = () => {
 
             {/* Diferenciais */}
             <div
-              className="p-8 rounded-3xl border-2 relative overflow-hidden"
+              className="p-8 rounded-3xl border-2 relative overflow-hidden scroll-animate"
               style={{
                 background: "linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.1))",
                 borderImage:

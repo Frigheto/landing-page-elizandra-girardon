@@ -1,47 +1,78 @@
-import { CreditCard, FileText, AlertCircle, Briefcase, Scale, TrendingDown, Sparkles } from "lucide-react";
+import { CreditCard, FileText, AlertCircle, Briefcase, Scale, TrendingDown, Sparkles, Gavel, Landmark, Wheat, Shield, TrendingUp } from "lucide-react";
 
 const services = [
   {
     id: 1,
-    icon: CreditCard,
-    title: "Empréstimos e Financiamentos",
-    description: "Revisão de contratos, taxas e juros abusivos, empréstimo consignado, RMC e RCC",
-    items: ["Contratos bancários", "Taxas abusivas", "Juros excessivos"]
+    icon: Scale,
+    title: "Direito Bancário",
+    description: "Atuação especializada em todas as questões envolvendo relações com instituições financeiras",
+    items: ["Contratos bancários", "Tarifas e juros abusivos", "Revisão de financiamentos"],
+    featured: true
   },
   {
     id: 2,
-    icon: AlertCircle,
-    title: "Cartões e Crédito",
-    description: "Problemas com limites, juros elevados, alterações não autorizadas e vendas casadas",
-    items: ["Juros elevados", "Limite sem autorização", "Venda casada"]
+    icon: Gavel,
+    title: "Execuções",
+    description: "Defesa estratégica em processos de execução e cobrança judicial",
+    items: ["Defesa em execuções", "Embargos executivos", "Negociação de dívidas"],
+    featured: true
   },
   {
     id: 3,
-    icon: FileText,
-    title: "Negativação Indevida",
-    description: "Inclusão indevida no SPC/Serasa, cobranças de dívidas inexistentes e débitos não autorizados",
-    items: ["SPC/Serasa indevido", "Cobranças irregulares", "Débitos automáticos"]
+    icon: Wheat,
+    title: "Direito do Agronegócio",
+    description: "Assessoria jurídica especializada para o setor do agronegócio",
+    items: ["Contratos rurais", "Financiamento agrícola", "Questões fundiárias"],
+    featured: true
   },
   {
     id: 4,
+    icon: CreditCard,
+    title: "Empréstimos e Financiamentos",
+    description: "Revisão de contratos, tarifas e juros abusivos, empréstimo consignado, RMC e RCC",
+    items: ["Contratos bancários", "Tarifas abusivas", "Juros excessivos"]
+  },
+  {
+    id: 5,
+    icon: AlertCircle,
+    title: "Cartões e Crédito",
+    description: "Problemas com limites, juros elevados, alterações não autorizadas e vendas casadas",
+    items: ["Juros elevados", "Limite sem autorização", "Venda casada e contratações indevidas"]
+  },
+  {
+    id: 7,
     icon: TrendingDown,
     title: "Superendividamento",
     description: "Planejamento de reorganização financeira e mediação com instituições",
     items: ["Múltiplas dívidas", "Reorganização financeira", "Renegociação"]
   },
   {
-    id: 5,
+    id: 8,
     icon: Briefcase,
     title: "Fraudes e Golpes",
     description: "Boletos falsos, transferências indevidas, clonagem de cartão e empréstimos fraudulentos",
-    items: ["Boletos falsos", "Clonagem", "Golpes financeiros"]
+    items: ["Golpe do Pix", "Boletos falsos", "Clonagem", "Golpes financeiros"]
   },
   {
-    id: 6,
-    icon: Scale,
+    id: 9,
+    icon: Landmark,
     title: "Contas e Serviços Bancários",
     description: "Tarifas indevidas, devolução de valores e movimentações duvidosas",
-    items: ["Tarifas indevidas", "Valores a devolver", "Cobrança de mora"]
+    items: ["Tarifas indevidas"]
+  },
+  {
+    id: 10,
+    icon: Shield,
+    title: "Execuções Bancárias",
+    description: "Defesa do seu mínimo existencial e patrimonial em processos de execução",
+    items: ["Impenhorabilidade de salário", "Impenhorabilidade do bem de família", "Impenhorabilidade do veículo", "Impenhorabilidade dos valores poupados"]
+  },
+  {
+    id: 11,
+    icon: TrendingUp,
+    title: "Prorrogação/Alongamento de Dívidas Rurais",
+    description: "Defesa do direito do produtor rural em pagar o que é justo e adequado",
+    items: ["Renegociação junto a bancos", "Defesa do direito do produtor rural"]
   },
 ];
 
@@ -80,7 +111,7 @@ const MentorsSection = () => {
 
       <div className="container max-w-6xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center scroll-animate">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg"
               style={{
@@ -107,28 +138,28 @@ const MentorsSection = () => {
             return (
               <div
                 key={service.id}
-                className="group relative"
+                className="group relative scroll-animate-fast"
                 style={{
                   animation: "fadeInUp 0.6s ease-out forwards",
                   animationDelay: `${index * 0.1}s`,
                   opacity: 0,
                 }}
               >
-                {/* Animated glow background */}
-                <div className="absolute -inset-2 bg-gradient-to-br from-primary/25 via-orange-400/15 to-red-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
+                {/* Animated glow background - intensified for featured */}
+                <div className={`absolute -inset-2 bg-gradient-to-br from-primary/25 via-orange-400/15 to-red-600/20 rounded-3xl blur-2xl transition-all duration-500 group-hover:scale-110 ${service.featured ? 'opacity-60 group-hover:opacity-100' : 'opacity-0 group-hover:opacity-100'}`}
                   style={{
                     background: "linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--accent) / 0.16), hsl(var(--primary) / 0.12))",
-                    animation: "glow-pulse 3s ease-in-out infinite",
+                    animation: service.featured ? "glow-pulse 3s ease-in-out infinite" : "glow-pulse 3s ease-in-out infinite",
                   }}
                 />
                 
                 {/* Secondary glow layer */}
-                <div className="absolute -inset-1 bg-gradient-to-t from-primary/12 via-transparent to-accent/12 rounded-2xl blur-xl opacity-0 group-hover:opacity-75 transition-all duration-500" />
+                <div className={`absolute -inset-1 bg-gradient-to-t from-primary/12 via-transparent to-accent/12 rounded-2xl blur-xl transition-all duration-500 ${service.featured ? 'opacity-50 group-hover:opacity-100' : 'opacity-0 group-hover:opacity-75'}`} />
                 
                 {/* Card */}
-                <div className="relative h-full p-8 rounded-2xl overflow-hidden border border-primary/20 backdrop-blur-md transition-all duration-300 group-hover:border-primary/70 group-hover:bg-background/90"
+                <div className={`relative h-full p-8 rounded-2xl overflow-hidden backdrop-blur-md transition-all duration-300 group-hover:bg-background/90 ${service.featured ? 'border-2 border-primary/50 bg-gradient-to-br from-primary/10 to-accent/5' : 'border border-primary/20 bg-card/90'} group-hover:border-primary/70`}
                   style={{
-                    background: "hsl(var(--card) / 0.9)",
+                    background: service.featured ? "linear-gradient(135deg, hsl(var(--primary) / 0.12), hsl(var(--accent) / 0.08))" : "hsl(var(--card) / 0.9)",
                   }}>
                   {/* Background gradient with shimmer */}
                   <div className="absolute inset-0 bg-gradient-to-br from-background to-background/50" />

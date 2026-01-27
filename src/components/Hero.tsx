@@ -38,7 +38,7 @@ const Hero = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-8">
           <span className="text-primary text-lg">✦</span>
-          <span className="text-sm text-primary/90">Especializado em Direito Bancário</span>
+          <span className="text-sm text-primary/90">Especializado nas áreas do Direito Bancário, Execução e Direito do Agronegócio</span>
         </div>
 
         {/* Heading */}
@@ -51,6 +51,7 @@ const Hero = () => {
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
           Atendimento humanizado e personalizado em Direito Bancário.
           Experiência em negociações com bancos e planejamento de reorganização financeira.
+          Especializado nas áreas do Direito Bancário, Execução e Direito do Agronegócio.
         </p>
 
         {/* CTA Buttons */}
