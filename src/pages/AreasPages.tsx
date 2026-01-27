@@ -30,13 +30,11 @@ export const ExecucoesPage = () => (
       title: "Execuções",
       icon: Gavel,
       description: "Defesa estratégica em processos de execução e cobrança judicial",
-      longDescription: "Os processos executivos exigem defesa rápida e precisa. Trabalhamos na elaboração de embargos executivos, levantamento de valores e renegociação de dívidas. Nossa atuação busca proteger seus direitos e encontrar soluções viáveis para resolver conflitos executivos com segurança e eficiência.",
+      longDescription: "Os processos executivos demandam defesa rápida e precisa. Trabalhamos na elaboração de embargos à execução, defesa na impenhorabilidade de valores e patrimônio, bem como na construção de acordos judiciais. Nossa atuação busca proteger seus direitos, ensejando a defesa do seu mínimo existencial e patrimonial, encontrando soluções viáveis para resolver conflitos com segurança e eficiência.",
       items: [
         "Defesa em processos de execução",
-        "Elaboração de embargos executivos",
-        "Levantamento de valores",
-        "Renegociação de dívidas em execução",
-        "Recursos contra decisões executivas"
+        "Acordos judiciais em execução",
+        "Defesa do patrimônio impenhorável"
       ],
       whatsappMessage: "Olá! Tenho uma questão relacionada a Execuções e gostaria de conversar com vocês. Posso agendar uma consulta?"
     }}
@@ -53,10 +51,10 @@ export const DireitoAgronegocioPage = () => (
       longDescription: "O agronegócio possui características e desafios próprios. Oferecemos assessoria especializada em contratos rurais, financiamento agrícola, questões fundiárias e relacionamento com instituições financeiras que atuam no setor. Entendemos as particularidades da atividade agrícola e estamos prontos para proteger seus interesses.",
       items: [
         "Elaboração e revisão de contratos rurais",
-        "Assessoria em financiamento agrícola",
-        "Defesa em questões fundiárias",
+        "Atuação na prorrogação/alongamento de dívidas rurais",
+        "Defesas em execuções rurais",
         "Negociação com bancos e cooperativas",
-        "Consultoria jurídica para propriedades rurais"
+        "Consultoria jurídica para produtores rurais"
       ],
       whatsappMessage: "Olá! Tenho uma questão de Direito do Agronegócio e gostaria de consultoria. Posso conversar com vocês?"
     }}

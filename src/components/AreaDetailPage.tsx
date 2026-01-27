@@ -87,7 +87,7 @@ const AreaDetailPage = ({ area }: AreaDetailPageProps) => {
 
               <div className="bg-card/50 backdrop-blur-xl border border-primary/25 rounded-3xl p-10 hover:border-primary/40 transition-colors">
                 <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8 text-foreground">
-                  O que cobrimos
+                  Nossos serviços abrangem
                 </h2>
                 <ul className="space-y-5">
                   {area.items.map((item, idx) => (
